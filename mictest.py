@@ -6,9 +6,9 @@ mic = sr.Microphone()
 while True:
     print("Say something ...")
 
-    with mic as source:
-        r.adjust_for_ambient_noise(source) #雑音対策
-        audio = r.listen(source)
+    with mic as source: # デフォルトのマイクをオーディオソースとして使用する
+        #r.adjust_for_ambient_noise(source) #雑音対策
+        audio = r.listen(source) #最初のフレーズを聞いて音声データに抽出する
 
     print ("Now to recognize it...")
 
